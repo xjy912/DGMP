@@ -51,6 +51,5 @@ DiGCN is released under the MIT License. See the LICENSE file for more details.
 
 ## Acknowledgements
 
-The template is borrowed from Pytorch-Geometric benchmark suite. We thank the authors of following works for opening source their excellent codes.
-[DiGCN](https://github.com/flyingtango/DiGC)
+We thank the authors of following works for opening source their excellent codes.[DiGCN](https://github.com/flyingtango/DiGC)
 
