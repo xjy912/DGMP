@@ -16,7 +16,6 @@ conda activate DGMP
 Then, you need to install torch manually to fit in with your server environment (e.g. CUDA version). run
 
 ```shell
-'''
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
 conda config --set show_channel_urls yes
