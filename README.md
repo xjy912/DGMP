@@ -23,7 +23,7 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
 conda install pytorch==1.5.0 torchvision==0.6.0 cudatoolkit=10.2 -c pytorch
 '''
 
-Besides, torch-scatter and torch-sparse are required for dealing with sparse graph. 
+## Besides, torch-scatter and torch-sparse are required for dealing with sparse graph. 
 For these two packages, please follow their official instruction [torch-scatter](https://github.com/rusty1s/pytorch_scatter) and [torch-sparse](https://github.com/rusty1s/pytorch_sparse).
 
 ```shell
@@ -44,10 +44,6 @@ python gcn.py --gpu-no -1 --dataset cancer
 python digcn.py --gpu-no -1 --dataset cancer
 python digcn_ib.py --gpu-no -1 --dataset cancer
 ```
-
-## Results
-
-<center><img src="imgs/results.png" alt="results" style="zoom:100%;" /></center>
 
 ## License
 
