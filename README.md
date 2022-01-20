@@ -21,9 +21,9 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/m
 conda config --set show_channel_urls yes
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
 conda install pytorch==1.5.0 torchvision==0.6.0 cudatoolkit=10.2 -c pytorch
-'''
+```
 
-## Besides, torch-scatter and torch-sparse are required for dealing with sparse graph. 
+Besides, torch-scatter and torch-sparse are required for dealing with sparse graph. 
 For these two packages, please follow their official instruction [torch-scatter](https://github.com/rusty1s/pytorch_scatter) and [torch-sparse](https://github.com/rusty1s/pytorch_sparse).
 
 ```shell
