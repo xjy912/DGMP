@@ -28,7 +28,6 @@ Besides, torch-scatter and torch-sparse are required for dealing with sparse gra
 For these two packages, please follow their official instruction [torch-scatter](https://github.com/rusty1s/pytorch_scatter) and [torch-sparse](https://github.com/rusty1s/pytorch_sparse).
 
 ```shell
-```
 cd DGMP
 pip install torch-geometric
 pip install torch-scatter 
