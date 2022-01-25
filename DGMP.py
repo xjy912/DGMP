@@ -35,7 +35,7 @@ parser.add_argument('--dropout', type=float, default=0.6)
 parser.add_argument('--alpha', type=float, default=0.1)
 parser.add_argument('--recache', action="store_true", help="clean up the old adj data", default=True)
 parser.add_argument('--normalize-features', action="store_true", default=False)
-parser.add_argument('--adj-type', type=str, default='or')
+parser.add_argument('--adj-type', type=str, default='di')
 parser.add_argument('--cv-runs', help='Number of cross validation runs',type=int,default=5)
 args = parser.parse_args()
 
