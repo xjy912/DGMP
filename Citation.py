@@ -125,7 +125,7 @@ def citation_datasets(path="/home/disk1/xujingyu/DGMP/DGMP/code/data/RegNetwrok/
     x_eye = torch.from_numpy(np.eye(len(features))).float()
     labels = torch.from_numpy(labels).long()
     
-    if adj_type == 'or':
+    if adj_type == 'di':
         print("Processing in,out and undirect adj matrix")
         indices1 = to_undirected(indices)
         edge_index, edge_weight = get_undirected_adj(indices1, features.shape[0], features.dtype)
@@ -137,20 +137,7 @@ def citation_datasets(path="/home/disk1/xujingyu/DGMP/DGMP/code/data/RegNetwrok/
         data.edge_index2 = edge_index
         data.edge_weight2 = edge_weight
         data.x_eye = x_eye
-        
-    elif adj_type == 'di':
-        print("Processing in,out and undirect adj matrix")
-        indices1 = to_undirected(indices)
-        edge_index, edge_weight = get_undirected_adj(indices1, features.shape[0],features.dtype)
-        data = Data(x=features, edge_index=edge_index, edge_weight=edge_weight,y=labels)
-        edge_index, edge_weight = get_in_directed_adj(indices1, features.shape[0],features.dtype)
-        data.edge_index1 = edge_index
-        data.edge_weight1 = edge_weight
-        edge_index, edge_weight = get_out_directed_adj(indices1, features.shape[0],features.dtype)
-        data.edge_index2 = edge_index
-        data.edge_weight2 = edge_weight
-        data.x_eye = x_eye
-        
+                
     elif adj_type == 'un':
         print("Processing to undirected adj")
         indices = to_undirected(indices)
