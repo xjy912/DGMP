@@ -95,16 +95,8 @@ class_names = np.array(['natural_gene','driver_gene'])
 node_names = genes_in_net
 
 #标签处理
-ncg_known_cancer_genes = pd.read_table('/home/disk1/xujingyu/桌面/gcn_data/NCG6_tsgoncogene.tsv')
-ncg_known_cancer_genes = list(ncg_known_cancer_genes['symbol'])
-
-cgc_known_cancer_genes = pd.read_csv('/home/disk1/xujingyu/桌面/gcn_data/cancer_gene_census.csv',header=0)
-cgc_known_cancer_genes = list(cgc_known_cancer_genes['Gene Symbol'])
-
-into_known_cancer_genes = pd.read_table('/home/disk1/xujingyu/桌面/gcn_data/IntOGen-DriverGenes.tsv')
-into_known_cancer_genes = list(into_known_cancer_genes['Symbol'])
-
-known_cancer_genes = list(set(ncg_known_cancer_genes)|set(cgc_known_cancer_genes)|set(into_known_cancer_genes))
+known_cancer_genes = pd.read_table('/home/disk1/xujingyu/桌面/gcn_data/NCG6_tsgoncogene.tsv')
+known_cancer_genes = list(known_cancer_genes['symbol'])
 
 known_cancer_genes_innet = node_names[node_names.genes.isin(known_cancer_genes)].genes
 
