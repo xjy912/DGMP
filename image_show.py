@@ -119,7 +119,6 @@ def process_MutSigCv_data(gene_names):
     result = pd.read_table(input_path)
     gene_score = result[['gene', 'p']]
     pred = gene_score.iloc[:, 1]
-    #pred = pred.fillna(0)
     pred = np.array(pred, dtype=np.float)
     mask_indices = np.argwhere(~np.isnan(labels))
     y_pred = pred[mask_indices]
@@ -198,8 +197,8 @@ def get_need_paremeter(dataset):
     labels, gene_names = g['z'],g['n']
     return mask_train, mask_test, labels, gene_names 
  
-#mask_train, mask_test, labels, gene_names = get_need_paremeter(dataset='cancer1')
-mask_train, mask_test, labels, gene_names = get_need_paremeter(dataset='kegg')
+mask_train, mask_test, labels, gene_names = get_need_paremeter(dataset='RegNetwork')
+#mask_train, mask_test, labels, gene_names = get_need_paremeter(dataset='kegg')
 
 y_true_id, y_pred_id = process_cv_data(model_name='RegNetwork_DGMP')
 y_true_nrfd, y_pred_nrfd = process_NRFD_data(dataset='RegNetwork')
