@@ -263,17 +263,7 @@ known_cancer_genes = list(set(ncg_known_cancer_genes)|set(cgc_known_cancer_genes
 #known_cancer_genes_innet = node_names[node_names.genes.isin(known_cancer_genes)].genes
 
 ncg_candidate_cancer_genes = pd.read_table('/home/disk1/xujingyu/桌面/gcn_data/NCG6_strong_candidates.tsv')
-ncg_candidate_cancer_genes = list(ncg_candidate_cancer_genes['symbol'])
-
-ncg_candidate_cancer_genes1 = pd.read_table('/home/disk1/xujingyu/桌面/gcn_data/NCG6_strong_candidates1.tsv')
-ncg_candidate_cancer_genes1 = list(ncg_candidate_cancer_genes1['symbol'])
-
-ncg_candidate_cancer_genes2 = pd.read_table('/home/disk1/xujingyu/桌面/gcn_data/NCG6_systemslevelproperties.tsv')
-ncg_candidate_cancer_genes2 = list(ncg_candidate_cancer_genes2['symbol'])
-
-candidate_cancer_genes =  list(set(ncg_candidate_cancer_genes)|set(ncg_candidate_cancer_genes1)|set(ncg_candidate_cancer_genes2))
-#candidate_cancer_genes_innet = node_names[node_names.genes.isin(candidate_cancer_genes)].genes
-#candidate_cancer_genes_innet = candidate_cancer_genes_innet[~candidate_cancer_genes_innet.isin(known_cancer_genes_innet)]
+candidate_cancer_genes = list(ncg_candidate_cancer_genes['symbol'])
 
 oncokb_genes = pd.read_table('/home/disk1/xujingyu/桌面/gcn_data/cancerGeneList.tsv', sep='\t')
 oncokb_no_ncg = oncokb_genes[~oncokb_genes['Hugo Symbol'].isin(known_cancer_genes)]
