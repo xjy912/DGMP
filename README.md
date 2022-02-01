@@ -41,13 +41,13 @@ python MLP.py --gpu-no 0 --dataset cancer
 
 cpu
 python gcn.py --gpu-no -1 --dataset cancer
-python digcn.py --gpu-no -1 --dataset cancer
-python digcn_ib.py --gpu-no -1 --dataset cancer
+python DGMP.py --gpu-no -1 --dataset cancer
+python MLP.py --gpu-no -1 --dataset cancer
 ```
 
 ## License
 
-DiGCN is released under the MIT License. See the LICENSE file for more details.
+DGMP is released under the MIT License. See the LICENSE file for more details.
 
 ## Acknowledgements
 
